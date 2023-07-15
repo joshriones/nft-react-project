@@ -1,0 +1,411 @@
+:root {
+  --primary-color: #a259ff;
+
+  --dark: #2b2b2b;
+  --mdark: #3b3b3b;
+  --grey: #858584;
+}
+
+#collection {
+  margin-bottom: 8rem;
+}
+
+.grid-col-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
+}
+
+.secondary-header {
+  color: white;
+  font-weight: 600;
+  font-size: 3.8rem;
+  line-height: 120%;
+  margin-bottom: 1rem;
+}
+
+.collection-after-text {
+  font-weight: 400;
+  line-height: 160%;
+  font-size: 2.2rem;
+  color: white;
+}
+.card {
+  max-width: 100%;
+  height: 52.5rem;
+}
+
+.card div span {
+  flex: 1;
+  font-weight: bold;
+  font-size: 2.2rem;
+  background-color: var(--primary-color);
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+/********************** CREATORS CARD **************************/
+
+.top-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: var(--mdark);
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.top-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.card-left-img {
+  margin: 0 auto;
+  position: relative;
+}
+.card-left-img img {
+  width: 100%;
+  height: 12rem;
+  position: relative;
+  left: 0;
+  bottom: 0;
+}
+
+.card-left-img span {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--grey);
+  background-color: var(--dark);
+  font-size: 1.6rem;
+  line-height: 140%;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  transform: translateX(-130%);
+  /* transform: translate(-250%, -450%); */
+}
+
+.card-right-txt {
+  text-align: center;
+}
+.card-right-txt h3 {
+  color: white;
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+.card-right-txt p {
+  margin-top: 5px;
+  color: #858584;
+  line-height: 140%;
+  font-weight: normal;
+  font-size: 1.6rem;
+}
+
+.card-right-sale {
+  color: white;
+  line-height: 140%;
+  font-weight: normal;
+  font-size: 1.6rem;
+  letter-spacing: 0.7px;
+}
+
+/********************** CATEGORIES' STYLES **************************/
+
+.category-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  margin-top: 6.8rem;
+}
+
+.category-card {
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: var(--mdark);
+}
+
+.category-card figcaption {
+  color: white;
+  padding: 2rem 3rem;
+  font-weight: 600;
+  font-size: 2.2rem;
+}
+
+.blur-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(7.5px);
+  z-index: 1;
+  transition: all 0.3s ease-in;
+}
+
+.category-card:hover .blur-overlay {
+  backdrop-filter: blur(0);
+}
+
+/********************** DISCOVER STYLES **************************/
+
+.discover-card {
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease-out;
+}
+
+.discover-card:hover {
+  transform: translateY(-5px);
+  transition: all 0.3s ease-out;
+}
+
+.discover-card img {
+  width: 100%;
+  margin-bottom: -2px;
+}
+
+.discover-deets {
+  padding: 2rem 3rem 2.5rem 3rem;
+  background-color: var(--mdark);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-between;
+  transition: all 1s ease-in;
+}
+
+.discover-card:hover .discover-deets {
+  background: var(
+    --gradient-1,
+    linear-gradient(149deg, #a259ff 0%, #ff6250 100%)
+  );
+}
+
+.discover-deets h2 {
+  color: white;
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 140%;
+  margin-bottom: 0.5rem;
+}
+
+/********************** FEATURED-SECTION STYLES **************************/
+
+#featured-section {
+  display: flex;
+  height: 100vh;
+
+  width: 100%;
+  background: linear-gradient(180deg, rgba(162, 89, 255, 0) 0%, #a259ff 100%),
+    url(../images/bgmushroom.png);
+  background-repeat: repeat;
+  background-position: center;
+  background-size: cover;
+  align-items: flex-end;
+  /* justify-content: space-between; */
+}
+
+.cta-left {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.featured-user {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  background-color: var(--mdark);
+  align-self: flex-start;
+}
+
+.featured-user img {
+  height: 2.4rem;
+}
+
+.featured-user p {
+  color: white;
+  font-size: 1.6rem;
+}
+
+.cta-header {
+  color: #fff;
+  font-family: Work Sans;
+  font-size: 51px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%; /* 56.1px */
+  text-transform: capitalize;
+}
+
+.auction-timer {
+  padding: 3rem;
+  width: 29.5rem;
+  border-radius: 20px;
+  background: rgba(59, 59, 59, 0.5);
+  backdrop-filter: blur(5px);
+
+  margin-left: auto;
+}
+
+.auction-timer > p {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 110%;
+  margin-bottom: 1rem;
+}
+
+.time {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.time-label {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 110%;
+}
+
+.time-labels h1 {
+  color: white;
+  font-size: 3.8rem;
+  font-weight: 700;
+  line-height: 120%;
+  text-transform: capitalize;
+}
+
+.time span {
+  color: white;
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 140%;
+  transform: translateY(-10px);
+}
+
+.time-labels p {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 110%;
+  margin-top: 0.5rem;
+}
+
+/********************** HOW-IT-WORKS STYLES **************************/
+
+#how-it-works .hiw-img {
+  width: 100%;
+}
+
+.how-it-works-card {
+  transition: all 0.3s ease-in-out;
+}
+
+.how-it-works-card:hover {
+  transform: translateY(-5px) rotate(-1deg);
+  box-shadow: rgba(151, 71, 255, 0.4) 5px 5px,
+    rgba(172, 108, 255, 0.3) 10px 10px, rgba(193, 145, 255, 0.2) 15px 15px,
+    rgba(213, 181, 255, 0.1) 20px 20px, rgba(234, 218, 255, 0.05) 25px 25px;
+}
+
+/********************** CALL-TO-ACTION-SECTION STYLES **************************/
+
+#call-to-action {
+}
+
+.cta-wrapper {
+  display: flex;
+  gap: 8rem;
+  border-radius: 20px;
+  background-color: var(--mdark);
+  padding: 6rem;
+}
+
+.cta-img-container {
+  border-radius: 20px;
+  width: 50%;
+  height: 41rem;
+  background-image: url(../images/spaceman.png);
+  background-position: center;
+  background-size: cover;
+  flex: 1;
+}
+
+.cta-actions {
+  flex: 1;
+}
+
+.cta-text {
+  color: white;
+  font-size: 2.2rem;
+  line-height: 160%;
+  margin: 1rem 0 4rem 0;
+}
+
+.cta-form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.cta-form button {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.cta-form button img {
+  height: 2rem;
+}
+
+.email-input {
+  height: 6rem;
+  width: 150%;
+  padding: 1.6rem 0 1.6rem 2rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 140%;
+  color: var(--dark);
+  border-radius: 20px;
+  border: none;
+  margin-right: -45px;
+}
+
+.cta-btn {
+  border: none;
+  background-color: var(--primary-color);
+  padding: 2rem 5rem;
+  border-radius: 20px;
+  height: 6rem;
+  font-size: 1.6rem;
+  color: white;
+  line-height: 140%;
+}
+
+.cta-btn:hover {
+  box-shadow: rgba(213, 181, 255, 0.1) 0px 4px 16px,
+    rgba(213, 181, 255, 0.05) 0px 8px 32px;
+}

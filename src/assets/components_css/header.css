@@ -1,0 +1,132 @@
+:root {
+  --primary-color: #a259ff;
+
+  --dark: #2b2b2b;
+  --mdark: #3b3b3b;
+  --grey: #858584;
+}
+
+header {
+  /* height: 100vh; */
+  width: 100vw;
+}
+
+.container {
+  padding: 8rem 11.5rem;
+}
+
+.header__nav {
+  width: 100%;
+  height: 10rem;
+  padding: 3.4rem 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav_logo {
+  width: 100%;
+  height: 3.2rem;
+}
+
+.nav_lists {
+  list-style-type: none;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.nav_list {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav_list:hover {
+  color: var(--primary-color);
+  color: linear-gradient(170deg, #a259ff 0%, #377df7 100%);
+}
+.btn {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  justify-content: center;
+  padding: 1.9rem 3rem;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 600;
+  background-color: var(--primary-color);
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+.btn-hover {
+  transition: all 0.3s ease;
+}
+
+.btn-hover:hover {
+  box-shadow: rgba(213, 181, 255, 0.1) 0px 4px 16px,
+    rgba(213, 181, 255, 0.05) 0px 8px 32px;
+}
+
+.hero_wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.primary-header {
+  font-weight: 600;
+  font-size: 6.7rem;
+  line-height: 110%;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.hero_texts p {
+  font-weight: 500;
+  font-size: 2.2rem;
+  line-height: 160%;
+  color: white;
+  margin-bottom: 3rem;
+}
+.records {
+  flex: 1;
+}
+
+.records h4 {
+  font-weight: 700;
+  font-size: 2.8rem;
+  line-height: 140%;
+  color: white;
+}
+.records p {
+  font-weight: 400;
+  font-size: 2.399rem;
+  line-height: 160%;
+}
+.hero_img {
+  width: 100%;
+}
+
+.hero_img img {
+  width: 100%;
+  height: 40.1rem;
+  object-fit: fill;
+  /* height: 70%; */
+}
+
+.info {
+  padding: 2.2rem 2rem;
+  background-color: var(--mdark);
+  border-radius: 0 0 20px 20px;
+  margin-top: -2px;
+}
+.hero_img h3 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 1rem;
+}
